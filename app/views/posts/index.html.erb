@@ -2,6 +2,8 @@
 
 <ul>
   <% @posts.each do |post| %>
-  <li><%= post.content %></li>
+  <% user = User.find(post.user_id) %>
+  <p><%= post.content %> | <%= post.vote %> upvotes | By: <%= user.name %> </p>
+  <hr>
   <% end %>
 </ul>
