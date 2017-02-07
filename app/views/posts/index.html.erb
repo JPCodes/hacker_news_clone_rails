@@ -3,7 +3,7 @@
 <ul>
   <% @posts.each do |post| %>
   <% user = User.find(post.user_id) %>
-  <p><%= post.content %> | <%= post.vote %> upvotes | By: <%= user.name %> </p>
+  <p><%= link_to post.content, user_post_path(user, post) %> | <%= post.vote %> upvotes | By: <%= user.name %> </p>
   <hr>
   <% end %>
 </ul>
