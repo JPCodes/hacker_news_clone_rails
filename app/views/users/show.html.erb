@@ -1,0 +1,19 @@
+<h1> <%= @user.name %> </h1>
+
+<% if @user.posts.any? %>
+  <h2>This user's posts:</h2>
+  <ul>
+    <% @user.posts.each do |p| %>
+    <p>Post Content: <%= p.content %></p>
+    <p>Current Vote: <%= p.vote %></p>
+    <hr>
+    <% end %>
+  </ul>
+<% else %>
+  <p>This user has no posts</p>
+<% end %>
+
+
+
+  <p><%= link_to "Create Post", new_user_post_path(@user) %></p>
+  <p><%= link_to "Delete User", user_path(@user), :data => {:confirm => "Are you sure?", :method => "delete"} %></p>
