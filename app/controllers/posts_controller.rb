@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 
   def new
     @user = User.find(params[:user_id])
-    @post = Post.new
+    @post = @user.posts.new
   end
 
   def show
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to post_path(@post.user)
+      redirect_to user_path(@post.user)
     else
       render :edit
     end
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path(@post.user)
+    redirect_to user_path(@post.user)
   end
 
 private
