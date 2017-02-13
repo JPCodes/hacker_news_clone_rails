@@ -1,24 +1,17 @@
-# README
+# _Hacker News Clone_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Support and contact details
 
-Things you may want to cover:
+_Github: [JPCodes](https://github.com/JPCodes)_
 
-* Ruby version
+## Technologies Used
 
-* System dependencies
+* _Rails_
+  * _Rspec_
+  * _Capybara_
+* _Ruby_
+* _Bootstrap_
 
-* Configuration
+### License
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+MIT
